@@ -1,3 +1,17 @@
 {
-  
+	"name": "DUEComm",
+	"version": "1.0.0",
+	"author": "Anthony Krizka",
+	"maintainer": "Anthony Krizka",
+	"sentence": "Additional functions and settings for Arduino DUE communication.",
+	"category": "Communication",
+	"architechturs": [
+		"samd"
+	],
+	"types": [
+		"Arduino"
+	],
+	"repository": "https://github.com/AnthonyKrizka/DUECommunication.git",
+	"url": "https://github.com/AnthonyKrizka/DUECommunication/archive/master.zip",
+	"archiveFileName": "master.zip"
 }
