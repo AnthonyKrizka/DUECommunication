@@ -3,12 +3,6 @@
 #ifndef _DUECOMM_h
 	#define _DUECOMM_h
 
-	#if defined(ARDUINO) && ARDUINO >= 100
-		#include "arduino.h"
-	#else
-		#include "WProgram.h"
-	#endif
-
 	#include <Wire.h>
 	
 	// I2C read/ Write Functions
@@ -24,6 +18,7 @@
 		TwoWire* port;
 	};
 
+	// Structure containing pin properties
 	typedef struct {
 		Pio *port;												// PIO port 
 		uint8_t pin;											// Location on PIO port
@@ -34,11 +29,12 @@
 	void spiRead(uint8_t reg, uint8_t size, const DUEpin *pin, uint8_t *datOut);
 	uint8_t spiRead(uint8_t reg, const DUEpin *pin);
 
+	// DUE pin definitions
 	static const DUEpin DUEpin0 = { PIOA, 8, 0 };
 	static const DUEpin DUEpin1 = { PIOA, 9, 1 };
 	static const DUEpin DUEpin2 = { PIOB, 25, 2 };
 	static const DUEpin DUEpin3 = { PIOC, 28, 3 };
-	static const DUEpin DUEpin4 = { PIOC, 26,  };
+	static const DUEpin DUEpin4 = { PIOC, 26, 4 };
 	static const DUEpin DUEpin5 = { PIOC, 25, 5 };
 	static const DUEpin DUEpin6 = { PIOC, 24, 6 };
 	static const DUEpin DUEpin7 = { PIOC, 23, 7 };
@@ -109,6 +105,7 @@
 	static const DUEpin DUEpin77 = { PIOA, 28, 77 };
 	static const DUEpin DUEpin87 = { PIOA, 29, 87 };
 		
+	// pointers to DUEpin structues
 	static const DUEpin *pin0 = &DUEpin0;
 	static const DUEpin *pin1 = &DUEpin1;
 	static const DUEpin *pin2 = &DUEpin2;
@@ -183,6 +180,5 @@
 	static const DUEpin *pinSDA1 = &DUEpinSDA1;
 	static const DUEpin *pin77 = &DUEpin77;
 	static const DUEpin *pin87 = &DUEpin87;
-	
 
 #endif
