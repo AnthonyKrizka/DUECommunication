@@ -5,7 +5,7 @@
 	"maintainer": "Anthony Krizka",
 	"sentence": "Additional functions and settings for Arduino DUE communication.",
 	"category": "Communication",
-	"architechturs": [
+	"architechtures": [
 		"samd"
 	],
 	"types": [
